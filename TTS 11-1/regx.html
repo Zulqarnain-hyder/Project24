@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#">
+        <input type="text" name="" id="uname"><br>
+        <br><br>
+        <label for="" id="valid" style="visibility: hidden; color: rgb(219, 55, 43);">Invalid Username</label>
+        <label for="" id="loged" style="visibility: hidden; color: rgb(51, 231, 90);">Successfully LogedIn</label>
+        <br>
+        <button type="submit" onclick="validate()">Submit</button>
+    </form>
+
+
+    <script>
+        function validate() {
+            var username = document.getElementById("uname").value; 
+            var regx = /[^afg]/;
+            if (regx.test(username)) {
+                document.getElementById("valid").style.visibility = "hidden";
+                document.getElementById("loged").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("valid").style.visibility = "visible";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
